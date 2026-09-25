@@ -27,3 +27,19 @@ output "ec2_security_group_id" {
   description = "EC2 Security group Id"
   value       = module.security.ec2_security_group_id
 }
+
+output "launch_template_id" {
+  description = "Application Launch Template ID"
+  value       = module.compute.launch_template_id
+}
+
+output "launch_template_latest_version" {
+  description = "Latest Launch Template version"
+  value       = module.compute.launch_template_latest_version
+}
+
+output "application_ami_id" {
+  description = "Amazon Linux 2023 AMI used by application instances"
+  value       = module.compute.ami_id
+  sensitive   = true
+}

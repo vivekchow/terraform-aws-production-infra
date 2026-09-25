@@ -35,3 +35,15 @@ variable "private_subnet_cidrs" {
     "10.0.12.0/24"
   ]
 }
+
+variable "instance_type" {
+  description = "EC2 instance type used by the application"
+  type        = string
+  default     = "t3.micro"
+}
+
+variable "root_volume_size" {
+  description = "Root EBS volume size in GiB"
+  type        = number
+  default     = 8
+}
