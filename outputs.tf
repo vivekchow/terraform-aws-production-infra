@@ -43,3 +43,24 @@ output "application_ami_id" {
   value       = module.compute.ami_id
   sensitive   = true
 }
+
+output "alb_dns_name" {
+  description = "Public DNS name of the Application Load Balancer"
+  value       = module.compute.alb_dns_name
+}
+
+output "target_group_arn" {
+  description = "Application Target Group ARN"
+  value       = module.compute.target_group_arn
+}
+
+output "listener_arn" {
+  description = "Application Load Balancer listener ARN"
+  value       = module.compute.listener_arn
+}
+
+
+output "alb_arn" {
+  description = "Application Load Balancer ARN"
+  value       = module.compute.alb_arn
+}
