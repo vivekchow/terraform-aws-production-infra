@@ -17,3 +17,13 @@ output "availability_zones" {
   description = "Availability Zones used"
   value       = module.network.availability_zones
 }
+
+output "alb_security_group_id" {
+  description = "ALB Security group Id"
+  value       = module.security.alb_security_group_id
+}
+
+output "ec2_security_group_id" {
+  description = "EC2 Security group Id"
+  value       = module.security.ec2_security_group_id
+}
