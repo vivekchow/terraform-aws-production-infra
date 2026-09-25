@@ -64,3 +64,8 @@ output "alb_arn" {
   description = "Application Load Balancer ARN"
   value       = module.compute.alb_arn
 }
+
+output "autoscaling_group_name" {
+  description = "Application Auto Scaling Group name"
+  value       = module.compute.autoscaling_group_name
+}

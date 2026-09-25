@@ -32,3 +32,23 @@ variable "alb_security_group_id" {
   description = "Security Group attached to the Application Load Balancer"
   type        = string
 }
+
+variable "private_subnet_ids" {
+  description = "Private subnet IDs used by the Auto Scaling Group"
+  type        = list(string)
+}
+
+variable "min_size" {
+  description = "Minimum ASG capacity"
+  type        = number
+}
+
+variable "desired_capacity" {
+  description = "Desired ASG capacity"
+  type        = number
+}
+
+variable "max_size" {
+  description = "Maximum ASG capacity"
+  type        = number
+}

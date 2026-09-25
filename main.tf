@@ -19,12 +19,17 @@ module "compute" {
 
   project_name = var.project_name
 
-  vpc_id            = module.network.vpc_id
-  public_subnet_ids = module.network.public_subnet_ids
+  vpc_id             = module.network.vpc_id
+  public_subnet_ids  = module.network.public_subnet_ids
+  private_subnet_ids = module.network.private_subnet_ids
 
   alb_security_group_id = module.security.alb_security_group_id
   ec2_security_group_id = module.security.ec2_security_group_id
 
   instance_type    = var.instance_type
   root_volume_size = var.root_volume_size
+
+  min_size         = var.min_size
+  desired_capacity = var.desired_capacity
+  max_size         = var.max_size
 }
